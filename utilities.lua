@@ -9,6 +9,8 @@ function addon:HasTalentRank(tabIndex, talentIndex, rankRequired)
 	return self:GetTalentRank(tabIndex, talentIndex) >= (rankRequired or 1)
 end
 
+-- disable glyphs for tbc:c
+--[[
 function addon:HasGlyph(id)
 	for i = 1, GetNumGlyphSockets() do
 		local _, _, _, spellId = GetGlyphSocketInfo(i)
@@ -19,6 +21,7 @@ function addon:HasGlyph(id)
 	
 	return false
 end
+]]
 
 function addon:GetItemSetCount(set)
 	local count = 0
